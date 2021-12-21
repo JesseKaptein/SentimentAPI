@@ -1,0 +1,12 @@
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# Other
+__pycache__
+notebooks/*
+.idea
+
+!notebooks/*.ipynb
+!notebooks/data/predictions.csv

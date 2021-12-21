@@ -1,0 +1,15 @@
+{
+  "lr__C": 0.9025367736148637,
+  "lr__penalty": "l2",
+  "preprocesser__min_length": 1.0,
+  "preprocesser__remove_numbers": false,
+  "preprocesser__remove_punctuation": false,
+  "preprocesser__to_lower": true,
+  "preprocesser__remove_stopwords": true,
+  "preprocesser__lemmatize": true,
+  "vectorizer__max_df": 0.9202403114186192,
+  "vectorizer__max_features": 100000.0,
+  "vectorizer__min_df": 1.0,
+  "vectorizer__ngram_range": [1, 2],
+  "vectorizer__stop_words": "english"
+}

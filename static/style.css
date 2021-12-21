@@ -1,0 +1,48 @@
+html {
+  margin: 15px 100px 10px 100px;
+}
+
+textarea {
+  width: 100%;
+  height: 130px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  resize: none;
+}
+
+button {
+  height: 25px;
+  width: 80px;
+  background-color: #f8f8f8;
+}
+
+.buttonHolder {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.alert {
+  padding: 15px;
+  background-color: #fff4cc;
+  border:2px solid #ffcc00;
+  margin-bottom: 20px;
+}
+
+.closeButton {
+  margin-left: 15px;
+  color: grey;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closeButton:hover {
+  color: #ffcc00;
+}

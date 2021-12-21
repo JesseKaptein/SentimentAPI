@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sentiment predictions</title>
+        <link href= "{{ url_for('static',filename='logo.png') }}" rel="icon" type="image/png">
+    </head>
+    <body>
+        <h1>Sentiment predictions</h1>
+        <p>
+            This tool can be used to predict positive or negative sentiment in any piece of English text.
+            If you don't want to use this interface, there is also an API available at
+            <a href="{{ base_url | safe }}sentiment/">{{ base_url | safe }}sentiment/<b>&lt;text&gt;</b> </a> in
+            which <b>&lt;text&gt;</b> should be replaced by your text (HTML encoded).
+        </p>
+        <p>
+            For example, if your text is <em>"Klarna is a great company!"</em> the following URL should be provided
+            <a href="{{ base_url | safe }}sentiment/Klarna%20is%20a%20great%20company%21">
+                {{ base_url | safe }}sentiment/Klarna%20is%20a%20great%20company%21
+            </a>.
+            This will return a JSON with probabilities the provided text has either positive or negative sentiment.
+        </p>
+        <h2>Text input:</h2>
+        <p>You can provide multiple entries by seperating them with a <em>;</em> (semicolon) delimiter.</p>
+        <form method="POST">
+          <textarea name="textbox">{{ input | safe }}</textarea>
+          <div class="buttonHolder">
+              <button type="submit" name="submit">Predict</button>
+          </div>
+
+        </form>
+        <h2>Prediction output:</h2>
+        <p>Note: a warning appears if model performance may be hampered.</p>
+        <div class="alert" style="display: {{ show_alert | safe }};">
+          <span class="closeButton" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>Warning!</strong> One or more of the input texts you provided have less than 50% words
+            known to the model which may hamper model performance.
+        </div>
+        <textarea name="textbox">{{ output | safe }}</textarea>
+    </body>
+</html>
