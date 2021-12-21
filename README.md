@@ -18,7 +18,7 @@ The model's final architecture can be described as follows:
 2. **TF-IDF vecotrization** to transform text into features
 3. **Logistic regression** to estimate sentiment probabilities
 
-For more details, please see modeling/` and `modeling/input` for
+For more details, please see `modeling/` and `modeling/input` for
 (optimal) model inputs.
 
 ## App/API
